@@ -77,7 +77,7 @@ def main():
     tagger.train(x_train, y_train)
     print(tagger.eval(x_test, y_test))
     print(tagger.predict('я'))
-    print(f'Частеречная статистика по указанному окончанию: {tagger["я"]}')
+    print(f'POS-statistics on this ending: {tagger["я"]}')
     tagger.save('tagger.pkl')
     tagger = tagger.load('tagger.pkl')
     print(type(tagger))
